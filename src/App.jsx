@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <div className="grid grid-cols-2 justify-items-center w-[100%] min-h-screen h-[100%] py-5 bg-slate-50">
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 justify-items-center w-[100%] min-h-screen h-[100%] py-5 bg-slate-50">
         <div>
           <Form
             resume={resume}
