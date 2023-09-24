@@ -1,5 +1,4 @@
 function ResumeHTML({ resume }) {
-    console.log(resume.font);
     return (
         <>
             <div id="resume" className={`bg-slate-50 text-black w-full h-full font-${resume.font}`}>
