@@ -67,7 +67,7 @@ function Form({ resume, setResume, handleInputChange, handleShowPDFViewer, showP
     return (
         <>
 
-            <div className="flex flex-col gap-5 max-w-xs min-w-xs" action="">
+            <div className="flex flex-col gap-5 max-w-xs min-w-xs drop-shadow-md" action="">
                 <div className="flex justify-space-between gap-1">
                     <button className="w-[50%] bg-slate-200 rounded-l-lg font-bold text-red-600 text-center" onClick={handleClear}>Clear</button>
                     <button className="w-[50%] bg-slate-200 rounded-r-lg font-bold text-center" onClick={handleReset}>Reset</button>
