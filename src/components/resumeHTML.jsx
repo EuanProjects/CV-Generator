@@ -1,7 +1,10 @@
 function ResumeHTML({ resume }) {
     return (
         <>
-            <div id="resume" className={`bg-slate-50 text-black w-full h-full font-${resume.font}`}>
+            <div id="resume" className={`bg-slate-50 text-black w-full h-full
+                ${resume.font === "sans" ? "font-sans" : ""}
+                ${resume.font === "mono" ? "font-mono" : ""}
+                ${resume.font === "serif" ? "font-serif" : ""}`}>
                 <div className="mx-5 h-[95%] w-[95%] flex flex-col items-center border-solid border-2 border-slate-200 bg-white drop-shadow-lg">
                     <div className="w-full" id="header">
                         <h1 className="text-2xl font-bold text-center">{resume.name}</h1>

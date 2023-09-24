@@ -14,18 +14,18 @@ Font.register(
 Font.register({
     family: 'mono',
     fonts: [
-      { src: '/public/RobotoMono-Regular.ttf' },
-      { src: '/public/RobotoMono-SemiBold.ttf', fontStyle: 'semibold' },
-      { src: '/public/RobotoMono-Bold.ttf', fontWeight: 'bold' },
+      { src: '/RobotoMono-Regular.ttf' },
+      { src: '/RobotoMono-SemiBold.ttf', fontStyle: 'semibold' },
+      { src: '/RobotoMono-Bold.ttf', fontWeight: 'bold' },
     ],
 });
 
 Font.register({
     family: 'serif',
     fonts: [
-      { src: 'public/NotoSerifKR-Regular.otf'},
-      { src: 'public/NotoSerifKR-SemiBold.otf', fontStyle: 'semibold' },
-      { src: 'public/NotoSerifKR-Bold.otf', fontWeight: 'bold' },
+      { src: 'NotoSerifKR-Regular.otf'},
+      { src: 'NotoSerifKR-SemiBold.otf', fontStyle: 'semibold' },
+      { src: 'NotoSerifKR-Bold.otf', fontWeight: 'bold' },
     ],
 });
 
