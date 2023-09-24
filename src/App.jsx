@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Form from './components/form';
+import { useState } from 'react';
+import './App.css';
+import starterResumeData from './components/data/StarterResumeData';
+import ResumeHTML from './components/resumeHTML';
+import { PDFViewer } from '@react-pdf/renderer';
+import ResumePDF from './components/resumePDF';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [resume, setResume] = useState(starterResumeData);
+  const [showPDFViewer, setShowPDFViewer] = useState(false);
+
+  function handleInputChange(e) {
+    const { name, value } = e.target;
+    setResume({
+      ...resume,
+      [name]: value,
+    });
+  }
+
+  function handleShowPDFViewer() {
+    setShowPDFViewer(!showPDFViewer);
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="grid grid-cols-2 justify-items-center w-[100%] min-h-screen h-[100%] py-5 bg-slate-50">
+        <div>
+          <Form
+            resume={resume}
+            setResume={setResume}
+            handleInputChange={handleInputChange}
+            handleShowPDFViewer={handleShowPDFViewer}
+            showPDFViewer={showPDFViewer}
+          />
+        </div>
+        {!showPDFViewer && <ResumeHTML resume={resume} />}
+        {showPDFViewer &&
+          <PDFViewer width="100%" height="100%">
+            <ResumePDF resume={resume} />
+          </PDFViewer>
+        }
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
