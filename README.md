@@ -1,8 +1,15 @@
-# React + Vite
+# CV Generator 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+CV Generator is an web app to create your next resume!
 
-Currently, two official plugins are available:
+## Demo
+![cv generator screenshot](https://github.com/EuanProjects/CV-Generator/blob/main/cv.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built With
+- React
+- Tailwind
+- [React-Feather](https://github.com/feathericons/react-feather)
+
+
+
